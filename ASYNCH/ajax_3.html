@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json파일로 이미지 가져오기</title>
+  </head>
+  <body>
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "data3.json", true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          const data = JSON.parse(xhr.responseText);
+          // document.write(`<h2>타이틀:${data.title}`);
+          // document.write(`이미지:<img src="${data.imag}" alt="${data.alt}"/>`);
+          const output = "<ul>";
+          data.forEach((item) => {
+            output += `
+            <li>
+
+               타이틀: ${item.title},
+              이미지: ${item.imag},
+                "alt": ${item.alt}
+              
+             </li> `;
+          });
+        }
+        
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

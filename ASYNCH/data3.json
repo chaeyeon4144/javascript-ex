@@ -1,0 +1,15 @@
+[{
+  "title": "AJAX 예제",
+  "imag": "images/image-1.jpg",
+  "alt": "사람이미지"
+}
+{
+  "title": "AJAX 예제2",
+  "imag": "images/image-2.jpg",
+  "alt": "사람이미지2"
+}
+{
+  "title": "AJAX 예제3",
+  "imag": "images/image-3.jpg",
+  "alt": "사람이미지3"
+}]
